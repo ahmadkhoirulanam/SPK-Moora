@@ -120,7 +120,8 @@ require_once('template/header.php');
 					<select name="ada_pilihan" class="form-control" required>
 						<option value="">--Pilih--</option>
 						<option value="0" <?php if($d['ada_pilihan']=="0") {echo "selected";} ?>>Inputan Langsung</option>
-						<option value="1" <?php if($d['ada_pilihan']=="1") {echo "selected";} ?>>Pilihan Sub Kriteria</option>						
+						<option value="1" <?php if($d['ada_pilihan']=="1") {echo "selected";} ?>>Pilihan Sub Kriteria</option>	
+						<option value="2" <?php if($d['ada_pilihan']=="2") {echo "selected";} ?>>Otomatis Sub Kriteria</option>					
 					</select>
 				</div>
 			</div>

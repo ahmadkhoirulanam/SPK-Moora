@@ -7,12 +7,12 @@ if($user_role == 'admin' || $user_role == 'user') {
 
 <html>
 	<head>
-		<title>Sistem Pendukung Keputusan Metode MOORA</title>
+		<title>E-Kinerja Al-Khoiriyah</title>
 	</head>
 <body onload="window.print();">
 
 <div style="width:100%;margin:0 auto;text-align:center;">
-	<h4>Hasil Akhir Perankingan MOORA</h4>
+	<h4>Hasil Akhir EVALUASI KINERJA GURU DAN TENAGA KEPENDIDIKAN DAN PENENTUAN KARYAWAN TERBAIK DI MI AL-KHOIRIYAH 02</h4>
 	<br/>
 	<table width="100%" cellspacing="0" cellpadding="5" border="1">
 		<thead>

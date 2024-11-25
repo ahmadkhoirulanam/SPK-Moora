@@ -9,20 +9,24 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Sistem Pendukung Keputusan Metode MOORA</title>
+  <title>E-Kinerja Al-Khoiriyah</title>
 
   <!-- Custom fonts for this template-->
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
+
   <link href="assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
   <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 
 </head>
+
 <body id="page-top">
 
   <!-- Page Wrapper -->
@@ -34,126 +38,144 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-database"></i>
+          <i class="fas fa-school"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SPK MOORA</div>
+        <div class="sidebar-brand-text mx-3">E-Kinerja Al-Khoiriyah</div>
       </a>
 
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item <?php if($page == "Dashboard"){echo "active";} ?>">
+      <li class="nav-item <?php if ($page == "Dashboard") {
+                            echo "active";
+                          } ?>">
         <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-home"></i>
           <span>Dashboard</span></a>
       </li>
-	  
-	  <?php
-	  $user_role = get_role();
-	  if($user_role == 'admin') {
-	  ?>
-	  <!-- Divider -->
-      <hr class="sidebar-divider">
 
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Master Data
-      </div>
+      <?php
+      $user_role = get_role();
+      if ($user_role == 'admin') {
+      ?>
+        <!-- Divider -->
+        <hr class="sidebar-divider">
 
-	  
-	  <li class="nav-item <?php if($page == "Kriteria"){echo "active";} ?>">
-        <a class="nav-link" href="list-kriteria.php">
-          <i class="fas fa-fw fa-cube"></i>
-          <span>Data Kriteria</span></a>
-      </li>
-	  
-	  <li class="nav-item <?php if($page == "Sub Kriteria"){echo "active";} ?>">
-        <a class="nav-link" href="list-sub-kriteria.php">
-          <i class="fas fa-fw fa-cubes"></i>
-          <span>Data Sub Kriteria</span></a>
-      </li>
-	  
-	  <li class="nav-item <?php if($page == "Alternatif"){echo "active";} ?>">
-        <a class="nav-link" href="list-alternatif.php">
-          <i class="fas fa-fw fa-users"></i>
-          <span>Data Alternatif</span></a>
-      </li>
-	  
-	  <li class="nav-item <?php if($page == "Penilaian"){echo "active";} ?>">
-        <a class="nav-link" href="list-penilaian.php">
-          <i class="fas fa-fw fa-edit"></i>
-          <span>Data Penilaian</span></a>
-      </li>
-	  
-	  <li class="nav-item <?php if($page == "Perhitungan"){echo "active";} ?>">
-        <a class="nav-link" href="perhitungan.php">
-          <i class="fas fa-fw fa-calculator"></i>
-          <span>Data Perhitungan</span></a>
-      </li>	
-	  
-	  <li class="nav-item <?php if($page == "Hasil"){echo "active";} ?>">
-        <a class="nav-link" href="hasil.php">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Data Hasil Akhir</span></a>
-      </li>	
-	  
-	  <!-- Divider -->
-      <hr class="sidebar-divider">
-	  
-	  <!-- Heading -->
-      <div class="sidebar-heading">
-        Master User
-      </div>
+        <!-- Heading -->
+        <div class="sidebar-heading">
+          Fitur Sistem
+        </div>
 
-	  
-	  <li class="nav-item <?php if($page == "User"){echo "active";} ?>">
-        <a class="nav-link" href="list-user.php">
-          <i class="fas fa-fw fa-users-cog"></i>
-          <span>Data User</span></a>
-      </li>	
-	  
-	  <li class="nav-item <?php if($page == "Profile"){echo "active";} ?>">
-        <a class="nav-link" href="list-profile.php">
-          <i class="fas fa-fw fa-user"></i>
-          <span>Data Profile</span></a>
-      </li>	
-	  
-	  <?php
-	  }elseif($user_role == 'user') {
-	  ?>
-	  
-	  <!-- Divider -->
-      <hr class="sidebar-divider">
+        <li class="nav-item <?php if ($page == "Alternatif") {
+                              echo "active";
+                            } ?>">
+          <a class="nav-link" href="list-alternatif.php">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Data Guru/Tendik</span></a>
+        </li>
 
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Master Data
-      </div>
-	  
-	  <li class="nav-item <?php if($page == "Hasil"){echo "active";} ?>">
-        <a class="nav-link" href="hasil.php">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Data Hasil Akhir</span></a>
-      </li>	
-	  
-	  <!-- Divider -->
-      <hr class="sidebar-divider">
-	  
-	  <!-- Heading -->
-      <div class="sidebar-heading">
-        Master User
-      </div>
-	  
-	  <li class="nav-item <?php if($page == "Profile"){echo "active";} ?>">
-        <a class="nav-link" href="list-profile.php">
-          <i class="fas fa-fw fa-user"></i>
-          <span>Data Profile</span></a>
-      </li>	
-	  
-	  <?php
-	  }
-	  ?>
+
+        <li class="nav-item <?php if ($page == "Kriteria") {
+                              echo "active";
+                            } ?>">
+          <a class="nav-link" href="list-kriteria.php">
+            <i class="fas fa-fw fa-cube"></i>
+            <span>Parameter Penilaian</span></a>
+        </li>
+
+        <li class="nav-item <?php if ($page == "Sub Kriteria") {
+                              echo "active";
+                            } ?>">
+          <a class="nav-link" href="list-sub-kriteria.php">
+            <i class="fas fa-fw fa-cubes"></i>
+            <span>Sub Penilaian</span></a>
+        </li>
+
+
+
+
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+          Master User
+        </div>
+
+
+        <li class="nav-item <?php if ($page == "User") {
+                              echo "active";
+                            } ?>">
+          <a class="nav-link" href="list-user.php">
+            <i class="fas fa-fw fa-users-cog"></i>
+            <span>Data User</span></a>
+        </li>
+
+        <li class="nav-item <?php if ($page == "Profile") {
+                              echo "active";
+                            } ?>">
+          <a class="nav-link" href="list-profile.php">
+            <i class="fas fa-fw fa-user"></i>
+            <span>Data Profile</span></a>
+        </li>
+
+      <?php
+      } elseif ($user_role == 'user') {
+      ?>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+          Master Data
+        </div>
+
+        <li class="nav-item <?php if ($page == "Perhitungan") {
+                              echo "active";
+                            } ?>">
+          <a class="nav-link" href="perhitungan.php">
+            <i class="fas fa-fw fa-calculator"></i>
+            <span>Data Perhitungan</span></a>
+        </li>
+
+        <li class="nav-item <?php if ($page == "Penilaian") {
+                              echo "active";
+                            } ?>">
+          <a class="nav-link" href="list-penilaian.php">
+            <i class="fas fa-fw fa-edit"></i>
+            <span>Penilaian Evaluasi</span></a>
+        </li>
+
+        <li class="nav-item <?php if ($page == "Hasil") {
+                              echo "active";
+                            } ?>">
+          <a class="nav-link" href="hasil.php">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Data Hasil Akhir</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+          Master User
+        </div>
+
+        <li class="nav-item <?php if ($page == "Profile") {
+                              echo "active";
+                            } ?>">
+          <a class="nav-link" href="list-profile.php">
+            <i class="fas fa-fw fa-user"></i>
+            <span>Data Profile</span></a>
+        </li>
+
+      <?php
+      }
+      ?>
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -176,7 +198,7 @@
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
           <!-- Sidebar Toggle (Topbar) -->
-		  <button id="sidebarToggleTop" class="btn text-info d-md-none rounded-circle mr-3">
+          <button id="sidebarToggleTop" class="btn text-info d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
           </button>
 
@@ -187,10 +209,10 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="text-uppercase mr-2 d-none d-lg-inline text-gray-600 small">
-					<?php
-					echo $_SESSION['username'];
-					?>
-				</span>
+                  <?php
+                  echo $_SESSION['username'];
+                  ?>
+                </span>
                 <img class="img-profile rounded-circle" src="assets/img/user.png">
               </a>
               <!-- Dropdown - User Information -->
@@ -199,8 +221,8 @@
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>
@@ -211,5 +233,5 @@
 
         </nav>
         <!-- End of Topbar -->
-		
-		<div class="container-fluid">
+
+        <div class="container-fluid">

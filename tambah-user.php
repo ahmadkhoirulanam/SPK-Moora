@@ -117,7 +117,7 @@ require_once('template/header.php');
 					<select name="role" required class="form-control">
 						<option value="">--Pilih--</option>
 						<option value="1">Administrator</option>
-						<option value="2">User</option>
+						<option value="2">Kepala Sekolah</option>
 					</select>
 				</div>
 			</div>

@@ -32,7 +32,7 @@ require_once('template/header.php');
 
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-fw fa-users"></i> Data Alternatif</h1>
+    <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-fw fa-users"></i> Data Guru/Tendik</h1>
 
 	<a href="list-alternatif.php" class="btn btn-secondary btn-icon-split"><span class="icon text-white-50"><i class="fas fa-arrow-left"></i></span>
 		<span class="text">Kembali</span>
@@ -50,7 +50,7 @@ require_once('template/header.php');
 <form action="tambah-alternatif.php" method="post">
 	<div class="card shadow mb-4">
 		<div class="card-header py-3">
-			<h6 class="m-0 font-weight-bold text-info"><i class="fas fa-fw fa-plus"></i> Tambah Data Alternatif</h6>
+			<h6 class="m-0 font-weight-bold text-info"><i class="fas fa-fw fa-plus"></i> Tambah Data Guru/Tendik</h6>
 		</div>
 		<div class="card-body">
 			<div class="row">				

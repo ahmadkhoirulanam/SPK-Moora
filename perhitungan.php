@@ -2,7 +2,7 @@
 require_once('includes/init.php');
 
 $user_role = get_role();
-if($user_role == 'admin') {
+if($user_role == 'user') {
 
 $page = "Perhitungan";
 require_once('template/header.php');
@@ -10,7 +10,10 @@ require_once('template/header.php');
 mysqli_query($koneksi,"TRUNCATE TABLE hasil;");
 
 $kriterias = array();
-$q1 = mysqli_query($koneksi,"SELECT * FROM kriteria ORDER BY kode_kriteria ASC");			
+$q1 = mysqli_query($koneksi,"SELECT * 
+FROM kriteria
+ORDER BY CAST(SUBSTRING(kode_kriteria, 2) AS UNSIGNED), kode_kriteria ASC;
+");			
 while($krit = mysqli_fetch_array($q1)){
 	$kriterias[$krit['id_kriteria']]['id_kriteria'] = $krit['id_kriteria'];
 	$kriterias[$krit['id_kriteria']]['kode_kriteria'] = $krit['kode_kriteria'];

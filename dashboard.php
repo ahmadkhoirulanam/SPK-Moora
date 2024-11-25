@@ -19,7 +19,7 @@ require_once('template/header.php');
 	?>
 	
     <!-- Content Row -->
-    <div class="alert alert-success">
+    <div class="alert alert-primary">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         Selamat datang <span class="text-uppercase"><b><?php echo $_SESSION['username']; ?>!</b></span> Anda bisa mengoperasikan sistem dengan wewenang tertentu melalui pilihan menu di bawah.
     </div>
@@ -30,7 +30,7 @@ require_once('template/header.php');
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="list-kriteria.php" class="text-secondary text-decoration-none">Data Kriteria</a></div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="list-kriteria.php" class="text-secondary text-decoration-none">Parameter Penilaian</a></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-cube fa-2x text-gray-300"></i>
@@ -45,7 +45,7 @@ require_once('template/header.php');
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="list-sub-kriteria.php" class="text-secondary text-decoration-none">Data Sub Kriteria</a></div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="list-sub-kriteria.php" class="text-secondary text-decoration-none">Sub Penilaian</a></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-cubes fa-2x text-gray-300"></i>
@@ -60,7 +60,7 @@ require_once('template/header.php');
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="list-alternatif.php" class="text-secondary text-decoration-none">Data Alternatif</a></div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="list-alternatif.php" class="text-secondary text-decoration-none">Data Guru/Tendik</a></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-users fa-2x text-gray-300"></i>
@@ -75,7 +75,7 @@ require_once('template/header.php');
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="list-penilaian.php" class="text-secondary text-decoration-none">Data Penilaian</a></div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="list-penilaian.php" class="text-secondary text-decoration-none">Penilaian Evaluasi</a></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-edit fa-2x text-gray-300"></i>
