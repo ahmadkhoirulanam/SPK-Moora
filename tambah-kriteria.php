@@ -11,6 +11,7 @@ if(isset($_POST['submit'])):
 	$type = $_POST['type'];
 	$bobot = $_POST['bobot'];
 	$ada_pilihan = $_POST['ada_pilihan'];
+	$id_variabel = $_POST['id_variabel'];
 
 	if(!$kode_kriteria) {
 		$errors[] = 'Kode kriteria tidak boleh kosong';
@@ -30,7 +31,7 @@ if(isset($_POST['submit'])):
 	
 	if(empty($errors)):
 		
-		$simpan = mysqli_query($koneksi,"INSERT INTO kriteria (id_kriteria, kode_kriteria, nama, type, bobot, ada_pilihan) VALUES ('', '$kode_kriteria', '$nama', '$type', '$bobot', '$ada_pilihan')");
+		$simpan = mysqli_query($koneksi,"INSERT INTO kriteria (id_kriteria, kode_kriteria, nama, type, bobot, ada_pilihan, id_variabel) VALUES ('', '$kode_kriteria', '$nama', '$type', '$bobot', '$ada_pilihan', '$id_variabel')");
 		if($simpan) {
 			redirect_to('list-kriteria.php?status=sukses-baru');		
 		}else{
@@ -100,8 +101,18 @@ require_once('template/header.php');
 					<select name="ada_pilihan" class="form-control" required>
 						<option value="">--Pilih--</option>
 						<option value="0">Input Langsung</option>
-						<option value="1">Pilihan Sub Kriteria</option>		
-						<option value="2">Otomatis Sub Kriteria</option>						
+						<option value="1">Pilihan Sub Kriteria</option>					
+					</select>
+				</div>
+
+				<div class="form-group col-md-6">
+					<label class="font-weight-bold">Variabel Penilaian</label>
+					<select name="id_variabel" class="form-control" required>
+						<option value="">--Pilih--</option>
+						<option value="1">Evaluasi dalam perencanaan pembelajaran</option>
+						<option value="2">Kinerja guru tentang pelaksanaan pembelajaran</option>		
+						<option value="3">Kinerja guru terkait evaluasi pembelajaran</option>	
+						<option value="4">Disiplin Kerja</option>					
 					</select>
 				</div>
 			</div>
