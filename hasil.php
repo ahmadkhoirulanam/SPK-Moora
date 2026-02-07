@@ -57,12 +57,13 @@ if ($user_role == 'admin' || $user_role == 'user') {
         d-block" style="width: 100px; text-align: center;">
 										<?php
 										if ($data['nilai'] > 4.5) {
-											echo "Bagus";
+											$hasil= "Bagus";
 										} elseif ($data['nilai'] >= 3 && $data['nilai'] <= 4.49) {
-											echo "Pemantauan";
+											$hasil= "Pemantauan";
 										} else {
-											echo "Perlu Evaluasi";
+											$hasil= "Perlu Evaluasi";
 										}
+										echo $hasil
 										?>
 									</span>
 								</td>
